@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-# 1. Model bileşenlerini ve eğitimde kullanılan sütun listesini yükleyelim
+# 1. Model bileşenlerini ve eğitimde kullanılan sütun listesinin yüklenmesi
 model = joblib.load('isparta_ev_fiyat_modeli.pkl')
 scaler = joblib.load('isparta_scaler.pkl')
 sutunlar = joblib.load('model_sutunlari.pkl')
@@ -30,7 +30,7 @@ with col2:
 # 4. Tahmin algoritmasının çalıştırılması
 if st.button("Fiyatı Hesapla", type="primary"):
     
-    # Modelin beklediği formatta (tüm sütunlar 0 olacak şekilde) bir sözlük yapısı kuralım
+    # Modelin beklediği formatta (tüm sütunlar 0 olacak şekilde) bir sözlük yapısı kurulması
     input_data = {col: 0 for col in sutunlar}
     
     # Sayısal değişkenlerin atanması
@@ -42,7 +42,7 @@ if st.button("Fiyatı Hesapla", type="primary"):
     if mahalle_sutun_adi in sutunlar:
         input_data[mahalle_sutun_adi] = 1 
     
-    # Veriyi DataFrame yapısına çevirip ölçeklendirme (Scaling) işlemini yapalım
+    # Veriyi DataFrame yapısına çevirip ölçeklendirme (Scaling) işleminin yapılması
     df_kullanici = pd.DataFrame([input_data])
     df_kullanici_scaled = scaler.transform(df_kullanici)
     
@@ -51,3 +51,4 @@ if st.button("Fiyatı Hesapla", type="primary"):
     
     # Sonuç ekranı
     st.success(f"Tahmini Aylık Kira Bedeli: **{int(tahmin_edilen_fiyat):,} TL**".replace(',', '.'))
+
