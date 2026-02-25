@@ -4,6 +4,8 @@ Bu proje, Isparta'daki kiralık ev piyasasını analiz eden ve makine öğrenmes
 
 Özellikle Süleyman Demirel Üniversitesi'nin etkisiyle oldukça dinamik olan yerel kiralık ev piyasası modellenmiş ve son kullanıcılar için interaktif bir Streamlit web uygulamasına dönüştürülmüştür.
 
+![Uygulama Ekran Görüntüsü](ekran_goruntusu.png)
+
 ## 🚀 Proje Adımları ve Metodoloji
 
 Proje, standart bir veri analitiği yaşam döngüsüne uygun olarak geliştirilmiştir:
