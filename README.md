@@ -37,7 +37,7 @@ Proje, standart bir veri analitiği yaşam döngüsüne uygun olarak geliştiril
 
 Projeyi lokal ortamınızda çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
 
-1. Repoyu bilgisayarınıza klonlayın:
+Repoyu bilgisayarınıza klonlayın:
 ```bash
 git clone https://github.com/tugrulsc1907-gif/isparta-house-price-prediction.git
 ```
